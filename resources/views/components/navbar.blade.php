@@ -12,6 +12,9 @@
         <li class="nav-item">
           <a class="nav-link" href="#">Link</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="{{route('article.index')}}">Tutti gli articoli</a>
+        </li>
         @auth
           <li class="nav-item dropdown"><li class="nav-item">
             <a class="nav-link" href="{{route('article.create')}}">Inserisci un articolo</a>
@@ -30,8 +33,7 @@
                 @csrf
               </form>
             </ul>
-          </li>
-          
+          </li>          
         @endauth
         @guest
           <li class="nav-item dropdown">
@@ -43,8 +45,7 @@
               <li><a class="dropdown-item" href="{{ route('login') }}">Accedi</a></li>
             </ul>
           </li>
-        @endguest
-
+        @endguest       
     </div>
   </div>
 </nav>
