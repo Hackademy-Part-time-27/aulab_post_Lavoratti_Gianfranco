@@ -13,6 +13,9 @@
           <a class="nav-link" href="#">Link</a>
         </li>
         @auth
+          <li class="nav-item dropdown"><li class="nav-item">
+            <a class="nav-link" href="{{route('article.create')}}">Inserisci un articolo</a>
+          </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"aria-expanded="false">
               Ciao {{ Auth::user()->name }}
@@ -28,6 +31,7 @@
               </form>
             </ul>
           </li>
+          
         @endauth
         @guest
           <li class="nav-item dropdown">
