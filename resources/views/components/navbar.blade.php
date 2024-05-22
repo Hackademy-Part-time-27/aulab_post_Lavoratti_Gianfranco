@@ -8,14 +8,14 @@
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="{{route('homepage')}}">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
+        </li>        
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="{{route('article.index')}}">Tutti gli articoli</a>
         </li>
-        @auth
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="{{route('careers')}}">Lavora con noi</a>
+        </li>
+        @auth          
           <li class="nav-item dropdown"><li class="nav-item">
             <a class="nav-link" href="{{route('article.create')}}">Inserisci un articolo</a>
           </li>
@@ -24,6 +24,12 @@
               Ciao {{ Auth::user()->name }}
             </a>
             <ul class="dropdown-menu">
+              @if (Auth::user()->is_admin)
+                <li><a href="{{route('admin.dashboard')}}" class="dropdown-item">Dashboard Admin</a></li>
+              @endif
+              @if (Auth::user()->is_revisor)
+                <li><a href="{{route('revisor.dashboard')}}" class="dropdown-item">Dashboard Revisor</a></li>
+              @endif
               <li><a class="dropdown-item" href="#">Profilo</a></li>
               <li>
                 <hr class="dropdown-divider">
