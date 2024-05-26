@@ -1,8 +1,8 @@
 <x-layout>
-    <div class="container-fluid p-5 bg-secondary-subtle text-center">
-        <div class="row justify-content-center">
+    <div class="container-fluid p-5 bg-secondary-subtle text-center headerCustom">
+        <div class="row justify-content-center containerTitlte">
             <div class="col-12">
-                <h1 class="display-1">
+                <h1 class="display-1 titleCustom">
                     The Aulab Post
                 </h1>
             </div>
@@ -35,7 +35,7 @@
                             <p>Redatto il {{$article->created_at->format('d/m/Y')}} <br> da
                                 <a href="{{route('article.byUser', $article->user)}}" class="text-capitalize fw-bold text-muted"> {{$article->user->name}}</a>
                             </p>
-                            <a href="{{route('article.show', $article)}}" class="btn btn-outline-secondary">Leggi</a>
+                            <a href="{{route('article.show', $article)}}" class="btn btn-outline-secondary" id="readArticleBtn">Leggi</a>
                         </div>
                     </div>
                 </div>

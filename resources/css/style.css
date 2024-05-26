@@ -2,5 +2,47 @@
     font-family: "Montserrat", sans-serif;
 }
 
+body{
+    background-color: #E2E3E5;
+}
+
+.dashboardTitle{
+    font-size: 50px;
+    font-weight: 600;
+    font-style: oblique;
+    background: linear-gradient(to right, #0000ff, #d20a2f, #0000ff);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.linkCustom:hover{
+    scale: 1.15;
+    color: red;
+}
+
+.navBgCustomColor{
+    background-color: #020202;
+}
+
+.navbar-brand{
+    color: #fff;
+}
+
+
+.nav-link{
+    color: #fff;
+}
+
+.headerCustom{
+    height: 25vh;
+    border-bottom: solid 5px black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
   
   
