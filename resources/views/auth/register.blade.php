@@ -1,5 +1,5 @@
 <x-layout>
-    <div class="container-fluid p-5 bg-secondary-subtle text-center">
+    <div class="container-fluid p-5 bg-secondary-subtle text-center headerCustom">
         <div class="row justify-content-center">
             <div class="col-12">
                 <h1 class="display-1">Registrati</h1>

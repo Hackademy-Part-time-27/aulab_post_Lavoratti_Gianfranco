@@ -19,7 +19,7 @@
           <li class="nav-item dropdown"><li class="nav-item">
             <a class="nav-link linkCustom" href="{{route('article.create')}}">Inserisci un articolo</a>
           </li>
-          <li class="nav-item dropdown">
+          <li class="nav-item dropdown linkCustom">
             <a class="nav-link dropdown-toggle linkCustom" href="#" role="button" data-bs-toggle="dropdown"aria-expanded="false">
               Ciao {{ Auth::user()->name }}
             </a>
@@ -43,10 +43,10 @@
         @endauth
         @guest
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle linkCustom" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Benvenuto Ospite
             </a>
-            <ul class="dropdown-menu">
+            <ul class="dropdown-menu ddMenuCustom">
               <li><a class="dropdown-item" href="{{ route('register') }}">Registrati</a></li>
               <li><a class="dropdown-item" href="{{ route('login') }}">Accedi</a></li>
             </ul>
