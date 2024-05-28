@@ -2,7 +2,7 @@
   <div class="container-fluid">
     <a class="navbar-brand linkCustom" href="{{route('homepage')}}">AulabPost</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+      <span class="navbar-toggler-icon toggleIconCustom"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -51,7 +51,11 @@
               <li><a class="dropdown-item" href="{{ route('login') }}">Accedi</a></li>
             </ul>
           </li>
-        @endguest       
+        @endguest 
+        <form action="{{route('article.search')}}" method="GET" class="d-flex searchBarCustom" role="search">
+          <input type="search" class="form-control me-2" name="query" placeholder="Cerca tra gli articoli.." aria-label="Search">
+          <button type="submit" class="btn btn-otline-secondary searchBtnCustom">Cerca</button>
+        </form>      
     </div>
   </div>
 </nav>
