@@ -1,11 +1,11 @@
-<nav class="navbar navbar-expand-lg navBgCustomColor">
+<nav class="navbar navbar-expand-lg navBgCustomColor navbarAlign">
   <div class="container-fluid">
     <a class="navbar-brand linkCustom" href="{{route('homepage')}}">AulabPost</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon toggleIconCustom"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+    <div class="collapse navbar-collapse navbarAlign" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 elementAlignCustom">
         <li class="nav-item linkCustom">
           <a class="nav-link  linkCustom" aria-current="page" href="{{route('homepage')}}">Home</a>
         </li>        
@@ -20,10 +20,10 @@
             <a class="nav-link linkCustom" href="{{route('article.create')}}">Inserisci un articolo</a>
           </li>
           <li class="nav-item dropdown linkCustom">
-            <a class="nav-link dropdown-toggle linkCustom" href="#" role="button" data-bs-toggle="dropdown"aria-expanded="false">
+            <a class="nav-link dropdown-toggle linkCustom username" href="#" role="button" data-bs-toggle="dropdown"aria-expanded="false">
               Ciao {{ Auth::user()->name }}
             </a>
-            <ul class="dropdown-menu">
+            <ul class="dropdown-menu dropdownMenuCustom">
               @if (Auth::user()->is_admin)
                 <li><a href="{{route('admin.dashboard')}}" class="dropdown-item">Dashboard Admin</a></li>
               @endif
@@ -52,10 +52,11 @@
             </ul>
           </li>
         @endguest 
-        <form action="{{route('article.search')}}" method="GET" class="d-flex searchBarCustom" role="search">
-          <input type="search" class="form-control me-2" name="query" placeholder="Cerca tra gli articoli.." aria-label="Search">
-          <button type="submit" class="btn btn-otline-secondary searchBtnCustom">Cerca</button>
-        </form>      
+      </ul>
+      <form action="{{route('article.search')}}" method="GET" class="d-flex searchBarCustom" role="search">
+        <input type="search" class="form-control me-2" name="query" placeholder="Cerca tra gli articoli.." aria-label="Search">
+        <button type="submit" class="btn btn-otline-secondary searchBtnCustom">Cerca</button>
+      </form>      
     </div>
   </div>
 </nav>

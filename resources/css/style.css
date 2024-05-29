@@ -11,17 +11,25 @@ body{
     font-weight: 600;
     font-style: oblique;
     background: linear-gradient(to right, #0000ff, #d20a2f, #0000ff);
-    -webkit-background-clip: text;
+    background-clip: text;
     color: transparent;
 }
 
+.linkCustom{
+    transition: color 0.35s, transform 0.35s;
+    padding: 0px 5px;
+}
+
 .linkCustom:hover{
-    scale: 1.15;
+    transform: scale(1.1);
     color: red;
 }
 
 .navBgCustomColor{
     background-color: #020202;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .navbar-brand{
@@ -34,20 +42,31 @@ body{
 }
 
 .headerCustom{
-    height: 25vh;
+    height: 100px;
     border-bottom: solid 5px black;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+.titleCustom {
+    margin-top: auto; /* Centro verticale */
+    margin-bottom: auto; /* Centro verticale */
+}
+
 .ddMenuCustom{
     background-color: #e2e3e5;
 }
 
+.dropdownMenuCustom{
+    z-index: 1000;
+}
+
+
 .searchBarCustom{
-    align-self: end;
-    margin-left: 305px;
+    justify-content: flex-end;
+    margin-left: auto;
+    
 }
 
 .toggleIconCustom{
@@ -64,6 +83,63 @@ body{
     color: white; 
     transition: 0.3s;
 }
+
+.card-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Allinea gli elementi all'inizio (sinistra) */
+    flex-wrap: nowrap; /* Assicura che gli elementi non si avvolgano su più righe */
+}
+
+.tagsBottom {
+    margin-top: auto;  /* Spinge i tag verso il basso */
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.card-footer p{
+    text-align: left;
+}
+
+
+.form-control.input-custom {
+    width: 100%;
+    max-width: 300px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+}
+
+.btn-custom {
+    flex-shrink: 0;
+    margin-bottom: 5px;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+    transform: scale(1.05);
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+    transform: scale(1.05);
+}
+
+
+
+
+
 
 
 
