@@ -8,7 +8,7 @@
   </div>
   <div class="container my-5">
     <div class="row justify-content-center">
-      <div class="col-12 col-md-8 d-flex flex-column">
+      <div class="col-12 col-md-4 d-flex flex-column">
         <img src="{{ Storage::url($article->image) }}" class="img-fluid" alt="Immagine dell'articolo: {{ $article->title }}">
         <div class="text-center">
           <h2>{{ $article->subtitle }}</h2>

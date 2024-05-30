@@ -18,10 +18,10 @@
             {{ session('alert') }}
         </div>
     @endif
-    <div class="container my-5">
-        <div class="row justify-content-evenly">
+    <div class="container my-3">
+        <div class="row justify-content-evenly custom-row">
             @foreach ($articles as $article)
-                <div class="col-12 col-md-3">
+                <div class="col-12 col-md-3 custom-col">
                     <div class="card" style="width: 18rem;">
                         <img src="{{ Storage::url($article->image) }}" class="card-img-top" alt="Immagine dell'articolo: {{$article->title}}">
                         <div class="card-body">
