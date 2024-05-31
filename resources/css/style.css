@@ -54,14 +54,9 @@ body{
     margin-bottom: auto;
 }
 
-.ddMenuCustom{
-    background-color: #e2e3e5;
-}
-
 .dropdownMenuCustom{
     z-index: 1000;
 }
-
 
 .searchBarCustom{
     justify-content: flex-end;
@@ -140,13 +135,59 @@ body{
     display: flex;
     flex-wrap: wrap;
     gap: 1.5rem;
+    
 }
 
 .custom-col {
     margin-bottom: 1.5rem;
 }
 
+.nav-item.dropdown-hover:hover > .dropdown-menu {
+    display: block;
+}
 
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    z-index: 1050;
+}
+
+.card {
+    position: relative;
+    z-index: 1;
+}
+
+.navbar {
+    position: relative;
+    z-index: 1000;
+}
+
+.nav-item.dropdown-hover {
+    position: relative;
+}
+
+.editBtnCustom{
+    width: 159px;
+}
+
+.editBtnCustom:hover{
+    background-color: green;
+}
+
+.undoBtnCustom{
+    width: 159px;
+}
+
+.undoBtnCustom:hover{
+    background-color: red;
+    color: white;
+}
+
+.containerEditBtn{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
 
 
 

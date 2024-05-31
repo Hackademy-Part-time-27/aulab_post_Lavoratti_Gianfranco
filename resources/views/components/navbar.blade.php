@@ -16,11 +16,11 @@
           <a class="nav-link  linkCustom" aria-current="page" href="{{route('careers')}}">Lavora con noi</a>
         </li>
         @auth          
-          <li class="nav-item dropdown"><li class="nav-item">
+          <li class="nav-item">
             <a class="nav-link linkCustom" href="{{route('article.create')}}">Inserisci un articolo</a>
           </li>
-          <li class="nav-item dropdown linkCustom">
-            <a class="nav-link dropdown-toggle linkCustom username" href="#" role="button" data-bs-toggle="dropdown"aria-expanded="false">
+          <li class="nav-item dropdown dropdown-hover linkCustom">
+            <a class="nav-link dropdown-toggle linkCustom username">
               Ciao {{ Auth::user()->name }}
             </a>
             <ul class="dropdown-menu dropdownMenuCustom">
@@ -30,7 +30,9 @@
               @if (Auth::user()->is_revisor)
                 <li><a href="{{route('revisor.dashboard')}}" class="dropdown-item">Dashboard Revisor</a></li>
               @endif
-              <li><a class="dropdown-item" href="#">Profilo</a></li>
+              @if (Auth::user()->is_writer)
+                <li><a class="dropdown-item" href="{{route('writer.dashboard')}}">Dashboard Writer</a></li>
+              @endif
               <li>
                 <hr class="dropdown-divider">
               </li>
@@ -42,11 +44,11 @@
           </li>          
         @endauth
         @guest
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle linkCustom" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <li class="nav-item dropdown dropdown-hover linkCustom">
+            <a class="nav-link dropdown-toggle linkCustom">
               Benvenuto Ospite
             </a>
-            <ul class="dropdown-menu ddMenuCustom">
+            <ul class="dropdown-menu dropdownMenuCustom">
               <li><a class="dropdown-item" href="{{ route('register') }}">Registrati</a></li>
               <li><a class="dropdown-item" href="{{ route('login') }}">Accedi</a></li>
             </ul>
