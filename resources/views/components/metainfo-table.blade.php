@@ -4,7 +4,7 @@
             <th scope="col">#</th>
             <th scope="col">Nome Tag</th>
             <th scope="col">Q.tà articoli collegati</th>
-            <th scope="col">Aggiorna</th>
+            <th scope="col" style="text-align: center">Aggiorna</th>
             <th scope="col">Cancella</th>
         </tr>
     </thead>

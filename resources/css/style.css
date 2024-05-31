@@ -7,7 +7,7 @@ body{
 }
 
 .dashboardTitle{
-    font-size: 50px;
+    font-size: 40px;
     font-weight: 600;
     font-style: oblique;
     background: linear-gradient(to right, #0000ff, #d20a2f, #0000ff);
@@ -21,8 +21,10 @@ body{
 }
 
 .linkCustom:hover{
-    transform: scale(1.1);
+    transform: scale(1.05);
     color: red;
+    padding: 0px 5px;
+    cursor: pointer;
 }
 
 .navBgCustomColor{
@@ -158,6 +160,7 @@ body{
 }
 
 .navbar {
+    width: 100%;
     position: relative;
     z-index: 1000;
 }
@@ -166,16 +169,16 @@ body{
     position: relative;
 }
 
-.editBtnCustom{
-    width: 159px;
+.createArticleBtn{
+    width: 290px;
 }
 
-.editBtnCustom:hover{
+.editBtnCustom, .undoBtnCustom {
+    width: 160px;
+}
+
+.editBtnCustom:hover, .createArticleBtn:hover{
     background-color: green;
-}
-
-.undoBtnCustom{
-    width: 159px;
 }
 
 .undoBtnCustom:hover{
@@ -188,12 +191,3 @@ body{
     display: flex;
     justify-content: space-evenly;
 }
-
-
-
-
-
-
-
-  
-  

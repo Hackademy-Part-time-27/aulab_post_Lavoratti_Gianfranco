@@ -15,10 +15,12 @@
         <li class="nav-item">
           <a class="nav-link  linkCustom" aria-current="page" href="{{route('careers')}}">Lavora con noi</a>
         </li>
-        @auth          
-          <li class="nav-item">
-            <a class="nav-link linkCustom" href="{{route('article.create')}}">Inserisci un articolo</a>
-          </li>
+        @auth
+          @if (Auth::user()->is_writer)
+            <li class="nav-item">
+              <a class="nav-link linkCustom" href="{{route('article.create')}}">Inserisci un articolo</a>
+            </li> 
+          @endif
           <li class="nav-item dropdown dropdown-hover linkCustom">
             <a class="nav-link dropdown-toggle linkCustom username">
               Ciao {{ Auth::user()->name }}
@@ -33,9 +35,9 @@
               @if (Auth::user()->is_writer)
                 <li><a class="dropdown-item" href="{{route('writer.dashboard')}}">Dashboard Writer</a></li>
               @endif
-              <li>
+              {{-- <li>
                 <hr class="dropdown-divider">
-              </li>
+              </li> --}}
               <li><a class="dropdown-item" href="#" onclick="event.preventDefault(); document.querySelector('#form-logout').submit();">Logout</a></li>
               <form action="{{ route('logout') }}" method="POST" id="form-logout">
                 @csrf
