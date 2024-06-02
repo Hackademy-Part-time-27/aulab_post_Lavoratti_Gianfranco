@@ -1,13 +1,16 @@
-*{
+* {
     font-family: "Montserrat", sans-serif;
+    box-sizing: border-box;
 }
 
-body{
+body {
+    margin: 0;
+    padding: 0;
     background-color: #E2E3E5;
 }
 
-.dashboardTitle{
-    font-size: 40px;
+.dashboardTitle {
+    font-size: 36px;
     font-weight: 600;
     font-style: oblique;
     background: linear-gradient(to right, #0000ff, #d20a2f, #0000ff);
@@ -15,133 +18,190 @@ body{
     color: transparent;
 }
 
-.linkCustom{
+@media (max-width: 576px) {
+    .dashboardTitle {
+        font-size: 24px; /* Smaller font size for small screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .dashboardTitle {
+        font-size: 28px; /* Adjust as needed for medium screens */
+    }
+}
+
+.linkCustom {
     transition: color 0.35s, transform 0.35s;
     padding: 0px 5px;
 }
 
-.linkCustom:hover{
+.linkCustom:hover {
     transform: scale(1.05);
     color: red;
     padding: 0px 5px;
     cursor: pointer;
 }
 
-.navBgCustomColor{
+.navBgCustomColor {
     background-color: #020202;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.navbar-brand{
+.navbar-brand {
     color: #fff;
 }
 
-
-.nav-link{
+.nav-link {
     color: #fff;
 }
 
-.headerCustom{
+.headerCustom {
     height: 100px;
     border-bottom: solid 5px black;
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+.container-fluid {
+    padding: 0 15px;
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .titleCustom {
-    margin-top: auto;
-    margin-bottom: auto;
+    margin: 0;
+    padding: 0;
+    font-size: 2.5rem;
+    font-weight: 600;
 }
 
-.dropdownMenuCustom{
+@media (max-width: 768px) {
+    .titleCustom {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .titleCustom {
+        font-size: 1.5rem;
+    }
+}
+
+.dropdownMenuCustom {
     z-index: 1000;
 }
 
-.searchBarCustom{
+.searchBarCustom {
     justify-content: flex-end;
     margin-left: auto;
-    
 }
 
-.toggleIconCustom{
+.toggleIconCustom {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.7)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
-.searchBtnCustom{
+.searchBtnCustom {
     background-color: #fff;
     transition: 0.3s;
 }
 
-.searchBtnCustom:hover{
+.searchBtnCustom:hover {
     background-color: red;
     color: white; 
     transition: 0.3s;
+}
+
+.card {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.card-body {
+    flex: 1 1 auto;
+    padding: 1rem;
 }
 
 .card-footer {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    flex-wrap: nowrap;
+    padding: 1rem;
 }
 
 .tagsBottom {
     margin-top: auto;
-    font-weight: 600;
-    font-size: 16px;
+    font-size: 1rem;
 }
 
-.card-footer p{
-    text-align: left;
+@media (max-width: 768px) {
+    .card-body {
+        padding: 0.5rem;
+    }
+
+    .card-footer {
+        padding: 0.5rem;
+    }
 }
 
+@media (max-width: 576px) {
+    .card-body {
+        padding: 0.25rem;
+    }
 
-.form-control.input-custom {
-    width: 100%;
-    max-width: 300px;
-    margin-right: 10px;
-    margin-bottom: 5px;
-}
-
-.btn-custom {
-    flex-shrink: 0;
-    margin-bottom: 5px;
-}
-
-.btn-secondary {
-    background-color: #6c757d;
-    border-color: #6c757d;
-    transition: background-color 0.3s, transform 0.3s;
-}
-
-.btn-secondary:hover {
-    background-color: #5a6268;
-    transform: scale(1.05);
-}
-
-.btn-danger {
-    background-color: #dc3545;
-    border-color: #dc3545;
-    transition: background-color 0.3s, transform 0.3s;
-}
-
-.btn-danger:hover {
-    background-color: #c82333;
-    transform: scale(1.05);
+    .card-footer {
+        padding: 0.25rem;
+    }
 }
 
 .custom-row {
     display: flex;
     flex-wrap: wrap;
     gap: 1.5rem;
-    
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .custom-col {
     margin-bottom: 1.5rem;
+    padding: 0;
+    box-sizing: border-box;
+    flex: 1 1 100%;
+}
+
+@media (min-width: 576px) {
+    .custom-col {
+        flex: 1 1 48%;
+    }
+}
+
+@media (min-width: 768px) {
+    .custom-col {
+        flex: 1 1 30%;
+    }
+}
+
+@media (min-width: 992px) {
+    .custom-col {
+        flex: 1 1 22%;
+    }
 }
 
 .nav-item.dropdown-hover:hover > .dropdown-menu {
@@ -154,40 +214,119 @@ body{
     z-index: 1050;
 }
 
-.card {
-    position: relative;
-    z-index: 1;
-}
-
 .navbar {
     width: 100%;
+    margin: 0;
+    padding: 5px 10px;
+    box-sizing: border-box;
     position: relative;
     z-index: 1000;
 }
 
-.nav-item.dropdown-hover {
-    position: relative;
-}
-
-.createArticleBtn{
+.createArticleBtn {
     width: 290px;
 }
 
-.editBtnCustom, .undoBtnCustom {
+.editBtnCustom,
+.undoBtnCustom {
     width: 160px;
 }
 
-.editBtnCustom:hover, .createArticleBtn:hover{
+.editBtnCustom:hover,
+.createArticleBtn:hover {
     background-color: green;
 }
 
-.undoBtnCustom:hover{
+.undoBtnCustom:hover {
     background-color: red;
     color: white;
 }
 
-.containerEditBtn{
+.containerEditBtn {
     width: 100%;
     display: flex;
     justify-content: space-evenly;
+}
+
+form.card {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+@media (max-width: 768px) {
+    form.card {
+        padding: 15px;
+    }
+}
+
+.form-label {
+    margin-bottom: 0.5rem;
+}
+
+@media (max-width: 576px) {
+    .form-label {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .col-lg-8 {
+        flex: 1 1 60%;
+    }
+}
+
+#tags {
+    width: 100%;
+}
+
+@media (max-width: 576px) {
+    #tags {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    #tags {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 1200px) {
+    #tags {
+        max-width: 400px;
+    }
+}
+
+.btn-outline-secondary.createArticleBtn {
+    min-width: 200px;
+}
+
+@media (max-width: 576px) {
+    .btn-outline-secondary.createArticleBtn {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .btn-outline-secondary.createArticleBtn {
+        font-size: 16px;
+    }
+}
+
+.text-secondary {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+@media (max-width: 576px) {
+    .text-secondary {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    .text-secondary {
+        font-size: 13px;
+    }
 }
