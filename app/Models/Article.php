@@ -6,13 +6,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Laravel\Scout\Searchable;
+use Illuminate\Support\Str;
 
 class Article extends Model
 {
     use HasFactory, Searchable;
 
     protected $fillable = [
-        'title', 'subtitle', 'body', 'image', 'user_id', 'category_id', 'is_accepted'
+        'title', 'subtitle', 'body', 'image', 'user_id', 'category_id', 'is_accepted', 'slug'
     ];
 
     public function user(){
@@ -23,8 +24,7 @@ class Article extends Model
         return $this->belongsTo(Category::class);
     }
 
-    public function toSearchableArray()
-    {
+    public function toSearchableArray(){
         return[
             'id' => $this->id,
             'title' => $this->title,
@@ -36,5 +36,15 @@ class Article extends Model
 
     public function tags(){
         return $this->belongsToMany(Tag::class);
+    }
+
+    public function getRouteKeyName(){
+        return 'slug';
+    }
+
+    public function readDuration(){
+        $totalWords = Str::wordCount($this->body);
+        $minutesToRead = round($totalWords / 200);
+        return intval($minutesToRead);
     }
 }
